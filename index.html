@@ -7,11 +7,16 @@
     <title>palera1n</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div id="center">
         <h1 onclick='window.location.href="https://github.com/palera1n/palera1n"'>palera1n</h1>
         <p>Developer jailbreak for iOS 15.x</p>
+        <br>
+        <p onclick="openFaq()" style="animation: none; cursor: pointer;">FAQ</p>
     </div>
     <!-- socials footer -->
     <div class="socials">
@@ -23,6 +28,21 @@
         <a href="https://github.com/mineek" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
         <a href="https://twitter.com/mineekdev" target="_blank"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png"/></a>
     </div>
+    <div id="faq" class="window" draggable="true" style="position: relative; height: 250px; width: 800px; margin-left: -400px; left: 50%; display: none;">
+        <div class="window-titlebar">
+          <p>palera1n</p>
+          <ul class="window-control">
+            <li class="window-close"></li>      
+          </ul>
+        </div>
+        <div class="window-content">
+          <h1>FAQ:</h1>
+            <p>Q: What is palera1n?</p>
+            <p>A: palera1n is a developer jailbreak for iOS 15.x, developer jailbreak meaning NO TWEAK INJECTION.</p>
+            <p>Q: What can it do then?</p>
+            <p>A: Well, it can deploy procursus rootless bootstrap and give you a working Sileo, from there you can install openssh or NewTerm for example.</p>
+        </div>
+      </div>
     <div class="bubbles" id="background">
         <div class="bubble"></div>
         <div class="bubble"></div>

@@ -611,3 +611,168 @@ p {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+.window {
+  padding: 0 6px 6px;
+  border: 1px solid #6C99C0;
+  background-color: #8DC8FB;
+  min-height: 300px;
+  min-width: 400px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  padding-top: 29px;
+}
+
+.window-titlebar {
+  height: 29px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.window-titlebar:hover {cursor: default;}
+.window-titlebar p {margin: 0; line-height: 29px;}
+
+.windows-titlebar-icon {
+  position: absolute;
+  left: 6px;
+  top: 3px;
+}
+
+
+.window-control {
+  position: absolute;
+  top: 0;
+  right: 6px;
+  margin: 0;
+}
+.window-control li {
+  display: block;
+  position: relative;
+  height: 20px;
+  float: left;
+  margin-left: 1px;
+  transition: background-color 0.15s ease;
+}
+.window-control li:hover {
+  transition: 0;
+}
+
+.window-minimaze {
+  width: 26px;
+}
+.window-minimaze:before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  bottom: 6px;
+  width: 8px;
+  height: 2px;
+  background-color: #282828;
+}
+.window-minimaze:hover { background-color: #3665B3; }
+.window-minimaze:hover:before { background-color: #fff; }
+
+
+.window-maximaze {
+  width: 26px;
+}
+.window-maximaze:before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  bottom: 5px;
+  width: 6px;
+  height: 5px;
+  border-style: solid;
+  border-color: #282828;
+  border-width: 2px 1px 1px;
+}
+.window-maximaze:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  bottom: 7px;
+  width: 7px;
+  height: 7px;
+  border-style: solid;
+  border-color: #282828;
+  border-width: 1px 1px 0 0;
+}
+.window-maximaze:hover {
+  background-color: #3665B3;
+}
+.window-maximaze:hover:after,
+.window-maximaze:hover:before {
+  border-color: #fff;
+}
+
+
+.window-close {
+  width: 45px;
+  background-color: #C75050;
+}
+.window-close:before,
+.window-close:after{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 17px;
+  bottom: 9px;
+  background-color: #fff;
+  transform: rotate(42deg);
+}
+.window-close:after {
+  transform: rotate(-42deg);
+}
+.window-close:hover {
+  background-color: #E04343;
+}
+
+
+.window-content {
+  background-color: #fff;
+  border: 1px solid #6C99C0;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.window-content:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+
+.window.deactive {
+  background-color: #EBEBEB;
+  border-color: #D3D3D3;
+}
+.window.deactive .window-content { border-color: #D3D3D3; }
+.window.deactive .window-close { background-color: #BCBCBC; transition: 0s;}
+
+/* for the window content, set the animation to none and the color to black */
+.window-content p {
+  animation: none;
+  color: black;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.window-titlebar p {
+  color: black;
+  animation: none;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* for the window content, set the animation to none and the color to black */
+.window-content h1 {
+  animation: none;
+  color: black;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
